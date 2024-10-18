@@ -1,8 +1,1 @@
-document
-	.getElementById('searchInput')
-	.addEventListener('keydown', function (event) {
-		if (event.key === 'Enter') {
-			event.preventDefault()
-			document.getElementById('searchButton').click()
-		}
-	})
+document.getElementById("searchInput").addEventListener("keydown",function(e){"Enter"===e.key&&(e.preventDefault(),document.getElementById("searchButton").click())});
