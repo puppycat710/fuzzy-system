@@ -1,9 +1,9 @@
 # ---> Node
-gulpfile.js
-package.json
-package-lock.json
-pnpm-lock.yaml
-src/
+# gulpfile.js
+# package.json
+# package-lock.json
+# pnpm-lock.yaml
+# src/
 
 # Logs
 logs
