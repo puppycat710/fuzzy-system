@@ -1,8 +1,8 @@
 {
   "name": "Pingu TV+",
   "short_name": "Pingu TV+",
-  "theme_color": "#0097b2",
-  "background_color": "#0097b2",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "fullScreen",
   "orientation": "portrait",
   "scope": "/",
