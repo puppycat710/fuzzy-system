@@ -47,13 +47,9 @@
     {% include "devTools.njk" %}
   </head>
   <body>
-    <main>
-      {% include "headerMenu.njk" %}
-      <div class="pt-[133px]">
-        {{ content | safe }}
-      </div>
-      {% include "footer.njk" %}
-    </main>
+    {% include "headerMenu.njk" %}
+    {{ content | safe }}
+    {% include "footer.njk" %}
     <!-- Carregue o JS após o HTML -->
     <script src="/js/dev-tools.js" defer></script>
     <script src="/js/disqus.js" defer></script>

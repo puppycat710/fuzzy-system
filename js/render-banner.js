@@ -1,1 +1,5 @@
-document.addEventListener("DOMContentLoaded",function(){document.getElementById("serie-banner").style.display="inherit"});
+document.addEventListener('DOMContentLoaded', function () {
+	const serie_banner = document.getElementById('serie-banner')
+
+	serie_banner.style.display = 'inherit'
+});

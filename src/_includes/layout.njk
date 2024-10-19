@@ -81,13 +81,9 @@
     {% include "devTools.njk" %}
   </head>
   <body>
-    <main>
-      {% include "headerMenu.njk" %}
-      <div class="pt-[133px]">
-        {{ content | safe }}
-      </div>
-      {% include "footer.njk" %}
-    </main>
+    {% include "headerMenu.njk" %}
+    {{ content | safe }}
+    {% include "footer.njk" %}
     <!-- Carregue o JS após o HTML -->
     <script defer src="/js/dev-tools.js"></script>
     <script defer src="/js/amp.js"></script>
