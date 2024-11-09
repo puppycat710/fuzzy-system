@@ -9,8 +9,7 @@ permalink: "/filmes/{{ movie.slug }}/"
 
 <div>
   <section class="flex flex-col justify-center items-center">
-    <main
-      class="w-[1130px] p-5 flex sm:flex-row flex-col gap-8 justify-between items-center bg-[#1F1F1F]">
+    <main class="w-[1200px] p-5 flex w-full gap-8 justify-between items-center bg-[#1F1F1F]">
       {# SERIE #}
       <div class="flex flex-col gap-5">
         <div class="flex flex-col gap-2">
@@ -26,7 +25,7 @@ permalink: "/filmes/{{ movie.slug }}/"
           </div>
         </div>
         {# PLAYER DE VIDEO #}
-        <iframe id="video-frame" class="border-2 border-[#555555]" width="640" height="400" scrolling="no" frameborder="0" allowFullScreen allow="encrypted-media; autoplay; picture-in-picture" src={{ movie.dublado }}></iframe>
+        <iframe id="video-frame" class="border-2 border-[#555555]" width="640" height="400" scrolling="no" frameborder="0" allowFullScreen allow="encrypted-media; autoplay; picture-in-picture" src=""></iframe>
         {# DESCRIÇÃO {{movie.dublado}} #}
         <div class="text-sm font-normal w-[640px] text-justify">
           {{ movie.description }}
@@ -47,7 +46,7 @@ permalink: "/filmes/{{ movie.slug }}/"
         </div>
       </div>
       {# COMENTARIOS #}
-      <div class="w-[390px] flex flex-col text-center gap-2">
+      <div class="xl:w-[390px] w-[720px] w-full flex flex-col text-center gap-4 py-12">
         <p>COMENTARIOS PINGO TV</p>
         <hr/>
         <div id="disqus_thread"></div>

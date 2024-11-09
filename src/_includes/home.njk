@@ -4,13 +4,33 @@
     height="450"
     class="sm:!w-[1200px] !w-[330px]"
     layout="flex-item"
-    visible-count="(min-width: 800px) 4, 2"
-    advance-count="(min-width: 800px) 4, 2">
+    visible-count="(min-width: 800px) 5, 3"
+    advance-count="(min-width: 800px) 5, 3">
     {% for movie in movies -%}
       <a href="/filmes/{{movie.slug}}/">
         <div class="flex flex-col gap-1 p-1">
           <amp-img src={{movie.coverImage}} width="226" height="316" alt={{movie.slug}} layout="responsive"></amp-img>
-          <h1>{{ movie.title }}</h1>
+          <h1 class="sm:text-sm text-xs">{{ movie.title }}</h1>
+        </div>
+      </a>
+    {%- endfor %}
+  </amp-base-carousel>
+</div>
+
+<div class="grid justify-center text-sm items-center p-4">
+  <h1>Terror</h1>
+  <amp-base-carousel
+    width="1200"
+    height="360"
+    class="sm:!w-[1200px] !w-[330px]"
+    layout="flex-item"
+    visible-count="(min-width: 800px) 5, 2"
+    advance-count="(min-width: 800px) 5, 2">
+    {% for movie in movies -%}
+      <a href="/filmes/{{movie.slug}}/">
+        <div class="flex flex-col gap-1 p-1">
+          <amp-img src={{movie.coverImage}} width="226" height="316" alt={{movie.slug}} layout="responsive"></amp-img>
+          <h1 class="sm:text-sm text-xs">{{ movie.title }}</h1>
         </div>
       </a>
     {%- endfor %}
