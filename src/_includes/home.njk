@@ -7,9 +7,9 @@
     visible-count="(min-width: 800px) 5, 3"
     advance-count="(min-width: 800px) 5, 3">
     {% for movie in movies -%}
-      <a href="/filmes/{{movie.slug}}/">
+      <a href="/filmes/{{ movie.slug }}/">
         <div class="flex flex-col gap-1 p-1">
-          <amp-img src={{movie.coverImage}} width="226" height="316" alt={{movie.slug}} layout="responsive"></amp-img>
+          <amp-img src={{ movie.coverImage }} width="226" height="316" alt={{ movie.slug }} layout="responsive"></amp-img>
           <h1 class="sm:text-sm text-xs">{{ movie.title }}</h1>
         </div>
       </a>
@@ -27,9 +27,9 @@
     visible-count="(min-width: 800px) 5, 2"
     advance-count="(min-width: 800px) 5, 2">
     {% for movie in movies -%}
-      <a href="/filmes/{{movie.slug}}/">
+      <a href="/filmes/{{ movie.slug }}/">
         <div class="flex flex-col gap-1 p-1">
-          <amp-img src={{movie.coverImage}} width="226" height="316" alt={{movie.slug}} layout="responsive"></amp-img>
+          <amp-img src={{ movie.coverImage }} width="226" height="316" alt={{ movie.slug }} layout="responsive"></amp-img>
           <h1 class="sm:text-sm text-xs">{{ movie.title }}</h1>
         </div>
       </a>
