@@ -6,6 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- AMP -->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
@@ -47,6 +48,7 @@
     {% include "devTools.njk" %}
   </head>
   <body>
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-3269358808922805"></amp-auto-ads>
     {% include "headerMenu.njk" %}
     {{ content | safe }}
     {% include "footer.njk" %}
