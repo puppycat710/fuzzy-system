@@ -4,7 +4,7 @@
   "@type": "TVSeries",
   "name": "{{serie.title}}",
   "genre": [{% for category in serie.categories %}"{{ category }}"{% if not loop.last %}, {% endif %}{% endfor %}],
-  "url": "http://pingutvplus.online/series/{{serie.slug}}/",
+  "url": "http://pingutvplus.xyz/series/{{serie.slug}}/",
   "inLanguage": "pt-BR",
   "image": "{{serie.coverImage}}",
 }

@@ -1,4 +1,4 @@
-const trustedOrigins = ['https://puppycat710.codeberg.page'] // Adicione suas origens confiáveis aqui
+const trustedOrigins = ['https://pingutvplus.xyz'] // Adicione suas origens confiáveis aqui
 
 window.addEventListener(
 	'message',
