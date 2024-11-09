@@ -7,20 +7,18 @@
       "@context": "http://schema.org",
       "@type": "WebSite",
       "name": "Pingu TV+",
-      "url": "http://pingutvplus.online/",
+      "url": "https://pingutvplus.xyz/",
       "description": "Pingu TV+: Animes, Séries, Novelas, Filmes e Desenhos Online! Netflix, Disney+, Amazon Prime Video, Globoplay, HBO Max, Paramount+, Apple TV+, e o melhor, de graça!",
       "inLanguage": "pt-BR"
     }
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    {% include "adsense.njk" %}
     <!-- AMP -->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
     <script async custom-element="amp-base-carousel" src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js"></script>
     <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     {% include "styles.njk" %}
     <style amp-boilerplate>
       body {
@@ -80,10 +78,10 @@
         }
       </style>
     </noscript>
+    {% include "adsense.njk" %}
     {% include "devTools.njk" %}
   </head>
   <body>
-    <amp-auto-ads type="adsense" data-ad-client="ca-pub-3269358808922805"></amp-auto-ads>
     {% include "headerMenu.njk" %}
     {{ content | safe }}
     {% include "footer.njk" %}

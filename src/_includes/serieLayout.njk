@@ -3,14 +3,12 @@
   <head>
     {% include "seo.njk" %}
     {% include "seoSerie.njk" %}
-    <script src="https://cdn.tailwindcss.com"></script>
-    {% include "adsense.njk" %}
     <!-- AMP -->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     {% include "styles.njk" %}
     <style amp-boilerplate>
       body {
@@ -46,18 +44,18 @@
         }
       </style>
     </noscript>
+    {% include "adsense.njk" %}
     {% include "devTools.njk" %}
   </head>
   <body>
-    <amp-auto-ads type="adsense" data-ad-client="ca-pub-3269358808922805"></amp-auto-ads>
     {% include "headerMenu.njk" %}
     {{ content | safe }}
     {% include "footer.njk" %}
     <!-- Carregue o JS após o HTML -->
-    <script src="/js/render-banner.js" defer></script>
-    <script src="/js/play-btn.js" defer></script>
-    <script src="/js/disqus.js" defer></script>
-    <script src="/js/amp.js" defer></script>
-    <script src="/js/search.js" defer></script>
+    <script defer src="/js/render-banner.js" defer></script>
+    <script defer src="/js/play-btn.js" defer></script>
+    <script defer src="/js/disqus.js" defer></script>
+    <script defer src="/js/amp.js" defer></script>
+    <script defer src="/js/search.js" defer></script>
   </body>
 </html>
