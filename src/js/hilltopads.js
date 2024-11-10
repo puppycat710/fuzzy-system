@@ -1,4 +1,5 @@
-;(function (hpqk) {
+// Popunder
+(function (hpqk) {
 	var d = document,
 		s = d.createElement('script'),
 		l = d.scripts[d.scripts.length - 1]
@@ -8,4 +9,15 @@
 	s.async = true
 	s.referrerPolicy = 'no-referrer-when-downgrade'
 	l.parentNode.insertBefore(s, l)
+})({})
+// Video Slider
+(function(wwlbs){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = wwlbs || {};
+s.src = "\/\/glum-mortgage.com\/blX.VMsXdJGVlV0\/Y\/W\/cs\/-e\/mR9KugZjU\/likdPJTKUt3\/MujyYPwDOtDVEotkNQTKcUyuN\/jDAk4\/MggG";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
 })({})
