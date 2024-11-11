@@ -36,14 +36,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="msapplication-starturl" content="/">
     <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "WebSite",
-      "name": "Pingu TV+",
-      "url": "https://pingutvplus.xyz/",
-      "description": "Pingu TV+: Animes, Séries, Novelas, Filmes e Desenhos Online! Netflix, Disney+, Amazon Prime Video, Globoplay, HBO Max, Paramount+, Apple TV+, e o melhor, de graça!",
-      "inLanguage": "pt-BR"
-    }
+      { "@context": "http://schema.org", "@type": "WebSite", "name": "Pingu TV+", "url": "https://pingutvplus.xyz/",
+      "description": "Pingu TV+: Animes, Séries, Novelas, Filmes e Desenhos Online! Netflix, Disney+, Amazon Prime Video,
+      Globoplay, HBO Max, Paramount+, Apple TV+, e o melhor, de graça!", "inLanguage": "pt-BR" }
     </script>
     <!-- AMP -->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -192,18 +187,6 @@
       </style>
     </noscript>
     
-<script src="https://alwingulla.com/88/tag.min.js" data-zone="113010" async data-cfasync="false"></script>
-
-<script type='text/javascript' src='//pl24960469.profitablecpmrate.com/c7/02/8a/c7028adef67e9965c5685858e0d62878.js'></script>
-<script type='text/javascript' src='//pl24971109.profitablecpmrate.com/3c/8f/1c/3c8f1cbce386c5711f9528feb2645cb5.js'></script>
-<script async="async" data-cfasync="false" src="//pl24971154.profitablecpmrate.com/ebf6406200b40ffad6f7de33e59200fa/invoke.js"></script>
-<script type="text/javascript" src="//www.highperformanceformat.com/bbe582c8a6bfa10d1b2e7f90353511dd/invoke.js"></script>
-
-<meta name="63ec643176f632d24cd6609532964536cc93d329" content="63ec643176f632d24cd6609532964536cc93d329"/>
-
-<script async src="https://jyzkut.com/p/waWQiOjExOTAzNTEsInNpZCI6MTM5MzI5Nywid2lkIjo2NTgyNjYsInNyYyI6Mn0=eyJ.js"></script>
-
-<meta name="ppck-ver" content="3fb35122c33d8e92d7ef0245993e7a87"/>
     
   </head>
   <body>
@@ -239,27 +222,28 @@
       fill="#0097b2"
       opacity="1"
       data-original="#000000"/></g>
-</svg> 
+</svg>
       <span class="text-xl pingu-title">Pingu TV+</span>
-      
     </div>
     <!-- Formulário para capturar o envio com o enter -->
-    <form
-      onsubmit="event.preventDefault();" class="flex justify-center items-center">
-      <!-- Input para o usuário digitar a pesquisa -->
-      <input
+      <form
+        onsubmit="event.preventDefault();" class="flex justify-center items-center">
+        <!-- Input para o usuário digitar a pesquisa -->
+        <input
         class="p-2 sm:w-72 w-full rounded-l-lg text-base text-black bg-[#303134]"
-        type="text"
-        id="searchInput"
-        required="required"
-        placeholder="Digite o nome do filme ou série..."
-        on="input-throttled:AMP.setState({ query: event.value })"/>
-      <!-- Botão para redirecionar para a pesquisa no Google -->
-      <a
-        [href]="'https://www.google.com/search?q=' + query + '+site:redecanais.ac&hl=pt-BR'"
-        target="_blank"
-        id="searchButton">
-        <button class="py-2 px-4 bg-[#0097b2] rounded-r-lg text-white border-none cursor-pointer text-base hover-bg-[#0056b3]" type="button"><svg
+          type="text"
+          id="search-input"
+          required="required"
+          placeholder="Digite o nome do filme ou série..."/>
+        <!-- Botão para redirecionar para a pesquisa no Google -->
+        <a
+          target="_blank"
+          id="searchButton"
+          on="tap:AMP.setState({ search: 2 })">
+          <button
+            id="search-button"
+            class="py-2 px-4 bg-[#0097b2] rounded-r-lg text-white border-none cursor-pointer text-base hover-bg-[#0056b3]"
+            type="button"><svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   version="1.1"
@@ -298,60 +282,86 @@
   <g></g>
   <g></g>
 </svg></button>
-      </a>
-    </form>
-  </div>
-  <amp-mega-menu height="40" layout="fixed-height" class="text-white flex justify-center items-center">
-    <nav class="bg-[#141414] w-full">
-      <ul class="flex items-center justify-center">
-        <li>
-          <a href="/" class="sm:text-base text-sm px-4">Inicio</a>
-        </li>
-        <li class="menu-item">
-          <span role="button" class="sm:text-base text-sm sm:px-4 px-2">Series</span>
-          <div role="dialog">
-            <ol class="bg-[#141414] flex flex-col items-center gap-2 sm:px-4 px-2">
-              <li><a href="/series/categorias/terror/">Terror</a></li>
-              <li><a href="/series/categorias/comedia/">Comédia</a></li>
-              <li><a href="/series/categorias/acao/">Ação</a></li>
-            </ol>
-          </div>
-        </li>
-        <li class="menu-item">
-          <span role="button" class="sm:text-base text-sm px-4">Filmes</span>
-          <div role="dialog">
-            <ol class="bg-[#181a1b] flex flex-col items-center gap-2 sm:px-4 px-2">
-              <li><a href="/filmes/categorias/terror/">Terror</a></li>
-              <li><a href="/filmes/categorias/comedia/">Comédia</a></li>
-              <li><a href="/filmes/categorias/acao/">Ação</a></li>
-            </ol>
-          </div>
-        </li>
-        <li class="menu-item">
-          <span role="button" class="sm:text-base text-sm px-4">Animes</span>
-          <div role="dialog">
-            <ol class="bg-[#141414] flex flex-col items-center gap-2 sm:px-4 px-2">
-              <li><a href="/series/categorias/terror/">Terror</a></li>
-              <li><a href="/series/categorias/comedia/">Comédia</a></li>
-              <li><a href="/series/categorias/acao/">Ação</a></li>
-            </ol>
-          </div>
-        </li>
-        <li class="menu-item">
-          <span role="button" class="sm:text-base text-sm px-4">Novelas</span>
-          <div role="dialog">
-            <ol class="bg-[#181a1b] flex flex-col items-center gap-2 sm:px-4 px-2">
-              <li><a href="/series/categorias/terror/">Terror</a></li>
-              <li><a href="/series/categorias/comedia/">Comédia</a></li>
-              <li><a href="/series/categorias/acao/">Ação</a></li>
-            </ol>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </amp-mega-menu>
-</header>
-    
+        </a>
+      </form>
+      
+    </div>
+    <amp-mega-menu height="40" layout="fixed-height" class="text-white flex justify-center items-center">
+      <nav class="bg-[#141414] w-full">
+        <ul class="flex items-center justify-center">
+          <li>
+            <a href="/" class="sm:text-base text-sm px-4">Inicio</a>
+          </li>
+          <li class="menu-item">
+            <span role="button" class="sm:text-base text-sm sm:px-4 px-2">Series</span>
+            <div role="dialog">
+              <ol class="bg-[#141414] flex flex-col items-center gap-2 sm:px-4 px-2">
+                <li>
+                  <a href="/series/categorias/terror/">Terror</a>
+                </li>
+                <li>
+                  <a href="/series/categorias/comedia/">Comédia</a>
+                </li>
+                <li>
+                  <a href="/series/categorias/acao/">Ação</a>
+                </li>
+              </ol>
+            </div>
+          </li>
+          <li class="menu-item">
+            <span role="button" class="sm:text-base text-sm px-4">Filmes</span>
+            <div role="dialog">
+              <ol class="bg-[#181a1b] flex flex-col items-center gap-2 sm:px-4 px-2">
+                <li>
+                  <a href="/filmes/categorias/terror/">Terror</a>
+                </li>
+                <li>
+                  <a href="/filmes/categorias/comedia/">Comédia</a>
+                </li>
+                <li>
+                  <a href="/filmes/categorias/acao/">Ação</a>
+                </li>
+              </ol>
+            </div>
+          </li>
+          <li class="menu-item">
+            <span role="button" class="sm:text-base text-sm px-4">Animes</span>
+            <div role="dialog">
+              <ol class="bg-[#141414] flex flex-col items-center gap-2 sm:px-4 px-2">
+                <li>
+                  <a href="/series/categorias/terror/">Terror</a>
+                </li>
+                <li>
+                  <a href="/series/categorias/comedia/">Comédia</a>
+                </li>
+                <li>
+                  <a href="/series/categorias/acao/">Ação</a>
+                </li>
+              </ol>
+            </div>
+          </li>
+          <li class="menu-item">
+            <span role="button" class="sm:text-base text-sm px-4">Novelas</span>
+            <div role="dialog">
+              <ol class="bg-[#181a1b] flex flex-col items-center gap-2 sm:px-4 px-2">
+                <li>
+                  <a href="/series/categorias/terror/">Terror</a>
+                </li>
+                <li>
+                  <a href="/series/categorias/comedia/">Comédia</a>
+                </li>
+                <li>
+                  <a href="/series/categorias/acao/">Ação</a>
+                </li>
+              </ol>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </amp-mega-menu>
+  </header>
+    <div [hidden]="search != 1">
+      
 <h1>Documentários</h1>
 
 <div class="grid justify-center text-sm items-center p-4">
@@ -365,6 +375,10 @@
     
   </amp-base-carousel>
 </div>
+    </div>
+    <div hidden [hidden]="search != 2">
+      <div id="movie-list" class="grid justify-center text-sm items-center p-4"></div>
+    </div>
     <footer class="bg-[#1F1F1F] mt-32">
   <main class="w-[1200px] mx-auto text-xs font-normal text-[#aaaaaa] py-16 px-5 flex flex-col gap-12 justify-center items-center
       ">

@@ -3,14 +3,9 @@
   <head>
     {% include "seo.njk" %}
     <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "WebSite",
-      "name": "Pingu TV+",
-      "url": "https://pingutvplus.xyz/",
-      "description": "Pingu TV+: Animes, Séries, Novelas, Filmes e Desenhos Online! Netflix, Disney+, Amazon Prime Video, Globoplay, HBO Max, Paramount+, Apple TV+, e o melhor, de graça!",
-      "inLanguage": "pt-BR"
-    }
+      { "@context": "http://schema.org", "@type": "WebSite", "name": "Pingu TV+", "url": "https://pingutvplus.xyz/",
+      "description": "Pingu TV+: Animes, Séries, Novelas, Filmes e Desenhos Online! Netflix, Disney+, Amazon Prime Video,
+      Globoplay, HBO Max, Paramount+, Apple TV+, e o melhor, de graça!", "inLanguage": "pt-BR" }
     </script>
     <!-- AMP -->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -78,12 +73,17 @@
         }
       </style>
     </noscript>
-    {% include "adsense.njk" %}
+    {# {% include "adsense.njk" %} #}
     {% include "devTools.njk" %}
   </head>
   <body>
     {% include "headerMenu.njk" %}
-    {{ content | safe }}
+    <div [hidden]="search != 1">
+      {{ content | safe }}
+    </div>
+    <div hidden [hidden]="search != 2">
+      <div id="movie-list" class="grid justify-center text-sm items-center p-4"></div>
+    </div>
     {% include "footer.njk" %}
     <!-- Carregue o JS após o HTML -->
     <script defer src="/js/adblock.js" defer></script>
