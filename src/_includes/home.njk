@@ -10,7 +10,7 @@
     {% for movie in movies -%}
       <a href="/filmes/{{ movie.slug }}/">
         <div class="flex flex-col gap-1 p-1">
-          <amp-img src={{ movie.coverImage }} width="226" height="316" alt={{ movie.slug }} layout="responsive"></amp-img>
+          <img src={{ movie.coverImage }} width="226" height="316" alt={{ movie.slug }} layout="responsive"></img>
           <h1 class="text-xs">{{ movie.title }}</h1>
         </div>
       </a>

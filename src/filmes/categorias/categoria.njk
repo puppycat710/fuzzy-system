@@ -21,7 +21,7 @@ permalink: "/filmes/categorias/{{ category.title | slug }}/index.html"
       {% if movie.categories and category.title in movie.categories %}
       <a href="/filmes/{{movie.slug}}/">
         <div class="flex flex-col gap-1 p-1">
-          <amp-img src="{{movie.coverImage}}" width="226" height="316" alt="{{movie.title}}" layout="responsive"></amp-img>
+          <img src="{{movie.coverImage}}" width="226" height="316" alt="{{movie.title}}"></img>
           <h1>{{ movie.title }}</h1>
         </div>
       </a>
