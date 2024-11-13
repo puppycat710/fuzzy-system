@@ -57,7 +57,7 @@ permalink: "/series/{{ serie.slug }}/"
             frameborder="0"
             allowFullScreen
             allow="encrypted-media; autoplay; picture-in-picture"
-            src=""></iframe>
+            src={{ serie.seasons[0].episodes[0].links.dublado }}></iframe>
           {# CATEGORIAS E TAGS {{ serie.seasons[0].episodes[0].links.dublado }} #}
           <div class="flex items-center gap-2 text-sm">
             Categoria:
