@@ -13,3 +13,7 @@ _paq.push(['enableLinkTracking'])
 	g.src = 'https://cdn.matomo.cloud/pingutvplusxyz.matomo.cloud/matomo.js'
 	s.parentNode.insertBefore(g, s)
 })()
+
+openModal.onclick = () => {
+	dialog.showModal();
+}

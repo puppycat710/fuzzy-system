@@ -47,7 +47,8 @@
         ]
       }
     ],
-    "categories": ["Séries", "Terror"]
+    "categories": ["Séries", "Terror"],
+    "path": "victoriousmillie"
   },
   {
     "title": "Big Bang: A Teoria/The Big Bang Theory",
@@ -582,7 +583,8 @@
         ]
       }
     ],
-    "categories": ["Séries", "Comédia"]
+    "categories": ["Séries", "Comédia"],
+    "path": "victoriousmillie"
   },
   {
     "title": "Os Simpsons",
@@ -1061,7 +1063,8 @@
       ]
       }
     ],
-    "categories": ["Séries", "Comédia"]
+    "categories": ["Séries", "Comédia"],
+    "path": "victoriousmillie"
   },
   {
     "title": "We Are Who We Are",
@@ -1130,6 +1133,7 @@
         ]
       }
     ],
-    "categories": ["Séries", "Drama"]
+    "categories": ["Séries", "Drama"],
+    "path": "victoriousmillie"
   }
 ]
