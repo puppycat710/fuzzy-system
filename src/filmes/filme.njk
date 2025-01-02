@@ -8,6 +8,14 @@ permalink: "/filmes/{{ movie.slug }}/"
 ---
 
 <div>
+  <div class="flex justify-center">
+    <div
+      style="display: none;"
+      id="serie-banner"
+      class="bg-[url('{{ movie.coverImage }}')] w-full brightness-50 bg-center bg-no-repeat bg-cover flex justify-center hidden">
+      <amp-img loading="lazy" src={{ movie.coverImage }} width="226" height="316" alt={{ movie.title }} layout="responsive"></amp-img>
+    </div>
+  </div>
   <section class="flex flex-col justify-center items-center">
     <main
       class="w-[1200px] p-5 flex xl:flex-row flex-col justify-between xl:items-start items-center bg-[#1F1F1F]">
