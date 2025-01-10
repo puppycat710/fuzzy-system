@@ -371,7 +371,7 @@
         
         <div class="flex flex-col gap-2">
           <h1 id="play-button" class="sm:text-3xl text-lg">Sobrenatural / Supernatural</h1>
-          <p id="display-time"></p>
+          <p id="display-time">Tempo Atual: 0:01:01</p>
           <div>
             
               <span class="text-[#a0a0a0] text-sm">Dublado</span>
@@ -1192,21 +1192,24 @@
       document.getElementById('play-button').addEventListener('click', () => {
         const progressBar = document.querySelector('.vjs-progress-holder');
         const displayTime = document.getElementById('display-time');
-        // Função para pegar o valor de aria-valuetext e exibir
-        const updateProgress = () => {
-          if (progressBar) {
+        // Verifique se a progress bar foi encontrada
+        if (progressBar) { // Função para pegar o valor de aria-valuetext e exibir
+          const updateProgress = () => {
             const ariaValueText = progressBar.getAttribute('aria-valuetext');
-            if (ariaValueText) {
+            if (ariaValueText) { // Mostrar o tempo atual extraído do atributo
               displayTime.textContent = `Tempo Atual: ${
                 ariaValueText.split(' of ')[0]
               }`;
+              console.log('Tempo Atual:', ariaValueText); // Log para depuração
             }
-          }
-        };
-        // Atualizar a cada 1 segundo
-        const intervalId = setInterval(updateProgress, 1000);
-        // Parar o intervalo quando necessário (exemplo: ao pausar o vídeo ou interação) clearInterval(intervalId); //
-        // Descomente se necessário em outra interação, por exemplo.
+          };
+          // Atualizar a cada 1 segundo
+          const intervalId = setInterval(updateProgress, 1000);
+          // Limpeza do intervalo após 10 segundos, para evitar execução infinita (se necessário)
+          setTimeout(() => clearInterval(intervalId), 10000); // Stop after 10 seconds
+        } else {
+          console.error('Elemento com classe "vjs-progress-holder" não encontrado.');
+        }
       });
     </script>
     <script defer src="/js/monetag-vignatte.js" defer></script>
