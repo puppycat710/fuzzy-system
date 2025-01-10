@@ -1188,13 +1188,29 @@
 </script>
     <!-- Carregue o JS após o HTML -->
     <script>
-      document.getElementById('play-button').addEventListener('click', () => {
+      document.getElementById('play-button').addEventListener('click', () => { // Clique no elemento com id="video-frame"
+        const videoFrame = document.getElementById('video-frame');
+        if (videoFrame) {
+          videoFrame.click();
+          console.log('Clique no video-frame realizado.');
+        } else {
+          console.error('Elemento com id "video-frame" não encontrado.');
+        }
+        // Clique no elemento com data-fp="r28bnykxp2"
+        const dataFpElement = document.querySelector('[data-fp="r28bnykxp2"]');
+        if (dataFpElement) {
+          dataFpElement.click();
+          console.log('Clique no elemento com data-fp="r28bnykxp2" realizado.');
+        } else {
+          console.error('Elemento com data-fp="r28bnykxp2" não encontrado.');
+        }
+        // Clique na div recap-icon
         const recapIcon = document.getElementById('recap-icon');
         if (recapIcon) {
-          recapIcon.click(); // Força o clique na div
-          console.log('Clique forçado na div "recap-icon".');
+          recapIcon.click();
+          console.log('Clique na div recap-icon realizado.');
         } else {
-          console.error('A div "recap-icon" não foi encontrada.');
+          console.error('Elemento com id "recap-icon" não encontrado.');
         }
       });
     </script>
