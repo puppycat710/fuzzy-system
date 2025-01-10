@@ -2254,15 +2254,7 @@
     <!-- Carregue o JS após o HTML -->
     <script>
       const iframe = document.querySelector('iframe');
-
-iframe.contentWindow.postMessage(
-  JSON.stringify({
-    event: 'command',
-    func: 'playVideo',
-  }),
-  '*'
-);
-
+      iframe.contentWindow.postMessage(JSON.stringify({event: 'command', func: 'playVideo'}), '*');
     </script>
     <script defer src="/js/monetag-vignatte.js" defer></script>
     <script defer src="/js/render-banner.js" defer></script>
