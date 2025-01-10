@@ -1189,7 +1189,7 @@
     <!-- Carregue o JS após o HTML -->
     <script>
       document.getElementById('play-button').addEventListener('click', () => {
-        const iframe = document.getElementById('player-iframe');
+        const iframe = document.getElementById('video-frame');
         // Verifica se o iframe está carregado antes de enviar a mensagem
         if (iframe && iframe.contentWindow) {
           iframe.contentWindow.postMessage(
