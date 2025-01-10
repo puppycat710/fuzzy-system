@@ -80,7 +80,7 @@
       </style>
     </noscript>
     {% include "adsense.njk" %}
-    {# {% include "devTool.njk" %} #}
+    {% include "devTool.njk" %}
   </head>
   <body>
     {% include "headerMenu.njk" %}
@@ -92,18 +92,6 @@
     </div>
     {% include "footer.njk" %}
     <!-- Carregue o JS após o HTML -->
-    <script>
-      const iframe = document.querySelector('iframe');
-
-iframe.contentWindow.postMessage(
-  JSON.stringify({
-    event: 'command',
-    func: 'playVideo',
-  }),
-  '*'
-);
-
-    </script>
     <script defer src="/js/monetag-vignatte.js" defer></script>
     <script defer src="/js/matomo.js" defer></script>
     <script defer src="/js/search.js"></script>
