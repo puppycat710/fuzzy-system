@@ -1188,13 +1188,23 @@
 </script>
     <!-- Carregue o JS após o HTML -->
     <script>
-      document.getElementById('play-button').addEventListener('click', () => { // Clique no elemento com id="video-frame"
-        const videoFrame = document.getElementById('video-frame');
-        if (videoFrame) {
-          videoFrame.click();
-          console.log('Clique no video-frame realizado.');
+      document.getElementById('play-button').addEventListener('click', () => { // Clique no elemento com id="video-frame" Clique no elemento com id="video-frame"
+        const iframe = document.getElementById('video-frame');
+        if (iframe) {
+          const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+          if (iframeDocument) {
+            const body = iframeDocument.body;
+            if (body) {
+              body.click(); // Força o clique no body do iframe
+              console.log('Clique no body dentro do iframe realizado.');
+            } else {
+              console.error('Body dentro do iframe não encontrado.');
+            }
+          } else {
+            console.error('Documento dentro do iframe não carregado.');
+          }
         } else {
-          console.error('Elemento com id "video-frame" não encontrado.');
+          console.error('Iframe com id "video-frame" não encontrado.');
         }
         // Clique no elemento com data-fp="r28bnykxp2"
         const dataFpElement = document.querySelector('[data-fp="r28bnykxp2"]');
