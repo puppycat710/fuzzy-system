@@ -371,6 +371,7 @@
         
         <div class="flex flex-col gap-2">
           <h1 id="play-button" class="sm:text-3xl text-lg">Sobrenatural / Supernatural</h1>
+          <p id="display-time"></p>
           <div>
             
               <span class="text-[#a0a0a0] text-sm">Dublado</span>
@@ -1189,13 +1190,23 @@
     <!-- Carregue o JS após o HTML -->
     <script>
       document.getElementById('play-button').addEventListener('click', () => {
-        const iframe = document.getElementById('video-frame');
-        if (iframe) { // Envia uma mensagem para o iframe
-          iframe.contentWindow.postMessage({
-            action: 'clickBody'
-          }, '*');
-          console.log('Mensagem enviada ao iframe para simular clique no body.');
-        }
+        const progressBar = document.querySelector('.vjs-progress-holder');
+        const displayTime = document.getElementById('display-time');
+        // Função para pegar o valor de aria-valuetext e exibir
+        const updateProgress = () => {
+          if (progressBar) {
+            const ariaValueText = progressBar.getAttribute('aria-valuetext');
+            if (ariaValueText) {
+              displayTime.textContent = `Tempo Atual: ${
+                ariaValueText.split(' of ')[0]
+              }`;
+            }
+          }
+        };
+        // Atualizar a cada 1 segundo
+        const intervalId = setInterval(updateProgress, 1000);
+        // Parar o intervalo quando necessário (exemplo: ao pausar o vídeo ou interação) clearInterval(intervalId); //
+        // Descomente se necessário em outra interação, por exemplo.
       });
     </script>
     <script defer src="/js/monetag-vignatte.js" defer></script>
