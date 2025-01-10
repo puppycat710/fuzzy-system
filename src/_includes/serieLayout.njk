@@ -45,37 +45,13 @@
       </style>
     </noscript>
     {% include "adsense.njk" %}
-    {# {% include "devTool.njk" %} #}
+    {% include "devTool.njk" %}
   </head>
   <body>
     {% include "headerMenu.njk" %}
     {{ content | safe }}
     {% include "footer.njk" %}
     <!-- Carregue o JS após o HTML -->
-    <script>
-      document.getElementById('play-button').addEventListener('click', () => {
-        const progressBar = document.querySelector('.vjs-progress-holder');
-        const displayTime = document.getElementById('display-time');
-        // Verifique se a progress bar foi encontrada
-        if (progressBar) { // Função para pegar o valor de aria-valuetext e exibir
-          const updateProgress = () => {
-            const ariaValueText = progressBar.getAttribute('aria-valuetext');
-            if (ariaValueText) { // Mostrar o tempo atual extraído do atributo
-              displayTime.textContent = `Tempo Atual: ${
-                ariaValueText.split(' of ')[0]
-              }`;
-              console.log('Tempo Atual:', ariaValueText); // Log para depuração
-            }
-          };
-          // Atualizar a cada 1 segundo
-          const intervalId = setInterval(updateProgress, 1000);
-          // Limpeza do intervalo após 10 segundos, para evitar execução infinita (se necessário)
-          setTimeout(() => clearInterval(intervalId), 10000); // Stop after 10 seconds
-        } else {
-          console.error('Elemento com classe "vjs-progress-holder" não encontrado.');
-        }
-      });
-    </script>
     <script defer src="/js/monetag-vignatte.js" defer></script>
     <script defer src="/js/render-banner.js" defer></script>
     <script defer src="/js/play-btn.js" defer></script>
