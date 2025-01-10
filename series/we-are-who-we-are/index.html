@@ -370,7 +370,7 @@
         class="flex flex-col gap-5">
         
         <div class="flex flex-col gap-2">
-          <h1 class="sm:text-3xl text-lg">We Are Who We Are</h1>
+          <h1 id="play-button" class="sm:text-3xl text-lg">We Are Who We Are</h1>
           <div>
             
               <span class="text-[#a0a0a0] text-sm">Dublado</span>
@@ -626,8 +626,21 @@
 </script>
     <!-- Carregue o JS após o HTML -->
     <script>
-      const iframe = document.querySelector('iframe');
-      iframe.contentWindow.postMessage(JSON.stringify({event: 'command', func: 'playVideo'}), '*');
+      document.getElementById('play-button').addEventListener('click', () => {
+        const iframe = document.getElementById('player-iframe');
+        // Verifica se o iframe está carregado antes de enviar a mensagem
+        if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage(
+            JSON.stringify({
+              event: 'command', // Evento esperado pelo player
+              func: 'playVideo', // Função que queremos acionar no player
+            }), '*' // Substitua '*' pelo domínio correto se souber
+          );
+          console.log('Mensagem enviada ao iframe.');
+        } else {
+          console.error('O iframe não está carregado.');
+        }
+      });
     </script>
     <script defer src="/js/monetag-vignatte.js" defer></script>
     <script defer src="/js/render-banner.js" defer></script>

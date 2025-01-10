@@ -32,7 +32,7 @@ permalink: "/series/{{ serie.slug }}/"
         class="flex flex-col gap-5">
         {# TITULO #}
         <div class="flex flex-col gap-2">
-          <h1 class="sm:text-3xl text-lg">{{ serie.title }}</h1>
+          <h1 id="play-button" class="sm:text-3xl text-lg">{{ serie.title }}</h1>
           <div>
             {% if serie.seasons[0].episodes[0].links.dublado %}
               <span class="text-[#a0a0a0] text-sm">Dublado</span>
